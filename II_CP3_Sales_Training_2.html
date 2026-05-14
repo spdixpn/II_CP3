@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industrial Injection CP3 Pump — Sales Training</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --orange: #D85A30;
+    --orange-light: #FAECE7;
+    --orange-dark: #4A1B0C;
+    --orange-mid: #993C1D;
+    --dark: #1E1E1C;
+    --dark2: #2C2C2A;
+    --mid: #444441;
+    --muted: #888780;
+    --light: #F1EFE8;
+    --border: #D3D1C7;
+    --white: #ffffff;
+    --green-bg: #EAF3DE;
+    --green-text: #3B6D11;
+    --red-bg: #FCEBEB;
+    --red-text: #791F1F;
+  }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: #F5F3EE;
+    color: var(--dark2);
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* HEADER */
+  .site-header {
+    background: var(--dark);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid var(--orange);
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+  .logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.02em;
+  }
+  .logo span { color: var(--orange); }
+  .header-badge {
+    background: var(--orange);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 12px;
+    border-radius: 999px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--dark);
+    padding: 4rem 2rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    border: 50px solid var(--orange);
+    opacity: 0.07;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -30px; right: 120px;
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    border: 24px solid var(--orange);
+    opacity: 0.05;
+  }
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.05;
+    margin-bottom: 1rem;
+    letter-spacing: 0.01em;
+  }
+  .hero h1 em { color: var(--orange); font-style: normal; }
+  .hero p {
+    font-size: 16px;
+    color: #B4B2A9;
+    max-width: 560px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .hero-stat { }
+  .hero-stat .num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--orange);
+    line-height: 1;
+  }
+  .hero-stat .lbl {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+
+  /* PROGRESS */
+  .progress-section {
+    background: var(--dark2);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #3a3a38;
+  }
+  .progress-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .progress-label { font-size: 13px; color: #888780; white-space: nowrap; }
+  .progress-track {
+    flex: 1;
+    height: 4px;
+    background: #3a3a38;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--orange);
+    border-radius: 999px;
+    transition: width 0.4s ease;
+    width: 16.6%;
+  }
+  .progress-pct { font-size: 13px; color: var(--orange); font-weight: 600; white-space: nowrap; }
+
+  /* MAIN LAYOUT */
+  .main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  /* SIDEBAR NAV */
+  .sidebar {
+    position: sticky;
+    top: 80px;
+  }
+  .sidebar-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+    padding-left: 4px;
+  }
+  .module-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+  .module-item button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    color: var(--mid);
+    text-align: left;
+    transition: all 0.15s;
+  }
+  .module-item button:hover {
+    background: var(--white);
+    border-color: var(--border);
+    color: var(--dark2);
+  }
+  .module-item button.active {
+    background: var(--white);
+    border-color: var(--orange);
+    color: var(--dark2);
+  }
+  .module-item .m-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--orange);
+    min-width: 22px;
+  }
+  .module-item .m-icon { font-size: 17px; }
+  .module-item .m-name { font-weight: 500; flex: 1; line-height: 1.3; }
+  .module-item button.active .m-name { color: var(--dark2); }
+
+  /* CONTENT PANEL */
+  .panel { display: none; animation: fadeIn 0.2s ease; }
+  .panel.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+  .panel-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.25rem;
+  }
+  .panel-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .panel-icon-wrap {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: var(--orange-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+  .panel-header h2 { font-size: 20px; font-weight: 600; color: var(--dark2); margin-bottom: 3px; }
+  .panel-header p { font-size: 13px; color: var(--muted); }
+
+  /* KPI CARDS */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-bottom: 1.5rem;
+  }
+  .kpi-card {
+    background: var(--light);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  .kpi-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--orange);
+    line-height: 1;
+  }
+  .kpi-label { font-size: 12px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+
+  /* BULLET LIST */
+  .bullet-list { list-style: none; }
+  .bullet-list li {
+    display: flex;
+    gap: 12px;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .bullet-list li:last-child { border-bottom: none; }
+  .bullet-list .arrow { color: var(--orange); font-size: 14px; margin-top: 2px; flex-shrink: 0; }
+  .bullet-list strong { color: var(--dark2); font-weight: 600; }
+
+  /* TIP BOX */
+  .tip-box {
+    background: var(--orange-light);
+    border-left: 3px solid var(--orange);
+    border-radius: 0 8px 8px 0;
+    padding: 0.85rem 1.1rem;
+    margin-top: 1.25rem;
+    font-size: 13.5px;
+    color: var(--orange-dark);
+    line-height: 1.6;
+  }
+  .tip-box strong { font-weight: 600; }
+
+  /* SPEC TABLE */
+  .spec-table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 1rem; }
+  .spec-table th {
+    text-align: left;
+    padding: 0.6rem 1rem;
+    background: var(--dark2);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 13px;
+  }
+  .spec-table th:first-child { border-radius: 6px 0 0 0; }
+  .spec-table th:last-child { border-radius: 0 6px 0 0; }
+  .spec-table td { padding: 0.6rem 1rem; border-bottom: 1px solid var(--border); }
+  .spec-table tr:nth-child(even) td { background: var(--light); }
+  .spec-table tr:last-child td { border-bottom: none; }
+  .spec-table .ii-val { color: var(--orange); font-weight: 600; }
+  .spec-table .comp-val { color: var(--mid); }
+  .badge-win {
+    display: inline-flex; align-items: center; gap: 4px;
+    background: var(--green-bg); color: var(--green-text);
+    font-size: 12px; font-weight: 600;
+    padding: 2px 10px; border-radius: 999px;
+  }
+  .badge-neutral {
+    display: inline-flex; align-items: center;
+    background: var(--light); color: var(--muted);
+    font-size: 12px; font-weight: 600;
+    padding: 2px 10px; border-radius: 999px;
+  }
+
+  /* OBJECTIONS */
+  .objection { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
+  .obj-question {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 1.1rem;
+    cursor: pointer;
+    background: var(--light);
+    gap: 12px;
+  }
+  .obj-question:hover { background: #EAE8E2; }
+  .obj-question span { font-size: 14px; font-weight: 600; color: var(--dark2); line-height: 1.4; }
+  .obj-chevron { color: var(--orange); font-size: 18px; transition: transform 0.2s; flex-shrink: 0; }
+  .obj-chevron.open { transform: rotate(180deg); }
+  .obj-answer {
+    padding: 1rem 1.1rem;
+    font-size: 13.5px;
+    color: var(--mid);
+    line-height: 1.65;
+    border-top: 1px solid var(--border);
+    background: var(--white);
+    display: none;
+  }
+  .obj-answer.open { display: block; }
+
+  /* SCENARIOS */
+  .scenario-label {
+    font-size: 13px; font-weight: 600; color: var(--dark2);
+    margin: 1.25rem 0 0.6rem;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .scenario-num {
+    background: var(--orange); color: var(--white);
+    font-size: 11px; font-weight: 700;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .scenario-bubble {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 6px;
+  }
+  .scenario-role { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .scenario-text { font-size: 14px; color: var(--dark2); line-height: 1.55; }
+  .scenario-bubble.response { background: var(--orange-light); border-color: #F0997B; }
+  .scenario-bubble.response .scenario-role { color: var(--orange-mid); }
+  .scenario-bubble.response .scenario-text { color: var(--orange-dark); }
+
+  /* QUIZ */
+  .quiz-q { font-size: 15px; font-weight: 600; color: var(--dark2); margin-bottom: 1rem; line-height: 1.5; }
+  .quiz-options { display: flex; flex-direction: column; gap: 8px; }
+  .quiz-opt {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--mid);
+    background: var(--white);
+    text-align: left;
+    font-family: 'Barlow', sans-serif;
+    transition: all 0.15s;
+    line-height: 1.4;
+  }
+  .quiz-opt:hover:not(:disabled) { border-color: var(--orange); background: var(--orange-light); color: var(--dark2); }
+  .quiz-opt.correct { background: var(--green-bg); border-color: #639922; color: var(--green-text); font-weight: 600; }
+  .quiz-opt.wrong { background: var(--red-bg); border-color: #A32D2D; color: var(--red-text); }
+  .quiz-opt:disabled { cursor: default; }
+  .quiz-feedback {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 13.5px;
+    display: none;
+    line-height: 1.55;
+  }
+  .quiz-feedback.correct { background: var(--green-bg); color: var(--green-text); display: block; }
+  .quiz-feedback.wrong { background: var(--red-bg); color: var(--red-text); display: block; }
+  .quiz-nav { display: flex; align-items: center; justify-content: space-between; margin-top: 1.25rem; }
+  .quiz-counter { font-size: 13px; color: var(--muted); }
+  .quiz-divider { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+
+  /* RESULTS */
+  .results-card { text-align: center; padding: 2rem 1rem; }
+  .results-score {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 72px; font-weight: 700;
+    color: var(--orange); line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .results-msg { font-size: 16px; font-weight: 600; color: var(--dark2); margin-bottom: 0.5rem; }
+  .results-sub { font-size: 14px; color: var(--muted); margin-bottom: 2rem; }
+
+  /* BUTTONS */
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 0.65rem 1.4rem;
+    border-radius: 8px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    border: none;
+  }
+  .btn-primary { background: var(--orange); color: var(--white); }
+  .btn-primary:hover { background: var(--orange-mid); }
+  .btn-outline { background: transparent; color: var(--orange); border: 1px solid var(--orange); }
+  .btn-outline:hover { background: var(--orange-light); }
+  .btn-dark { background: var(--dark2); color: var(--white); }
+  .btn-dark:hover { background: var(--dark); }
+  .btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 1.5rem; }
+
+  /* FOOTER */
+  .site-footer {
+    background: var(--dark);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    border-top: 3px solid var(--orange);
+  }
+  .site-footer p { font-size: 13px; color: #888780; }
+  .site-footer strong { color: var(--orange); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .main { grid-template-columns: 1fr; }
+    .sidebar { position: static; }
+    .module-list { flex-direction: row; flex-wrap: wrap; }
+    .module-item { flex: 1; min-width: 140px; }
+    .hero { padding: 2.5rem 1.25rem 2rem; }
+    .panel-card { padding: 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">Industrial <span>Injection</span></div>
+    <div class="header-badge">Sales Training</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">CP3 Pump Sales Training Program</div>
+    <h1>Why We Win —<br><em>Every Time</em></h1>
+    <p>A complete field guide to selling Industrial Injection CP3 pumps with confidence over any competitor.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">35+</div><div class="lbl">Years diesel<br>experience</div></div>
+      <div class="hero-stat"><div class="num">USA</div><div class="lbl">Engineered &amp;<br>tested</div></div>
+      <div class="hero-stat"><div class="num">7</div><div class="lbl">Training<br>modules</div></div>
+      <div class="hero-stat"><div class="num">OEM+</div><div class="lbl">Performance<br>standards</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="progress-section">
+  <div class="progress-inner">
+    <span class="progress-label" id="prog-label">Module 1 of 7</span>
+    <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
+    <span class="progress-pct" id="prog-pct">14%</span>
+  </div>
+</div>
+
+<main class="main">
+  <!-- SIDEBAR -->
+  <nav class="sidebar" aria-label="Training modules">
+    <div class="sidebar-title">Modules</div>
+    <ul class="module-list">
+      <li class="module-item"><button class="active" onclick="showPanel(0)"><span class="m-num">01</span><span class="m-icon">🔩</span><span class="m-name">What is a CP3?</span></button></li>
+      <li class="module-item"><button onclick="showPanel(1)"><span class="m-num">02</span><span class="m-icon">🏭</span><span class="m-name">Brand Story</span></button></li>
+      <li class="module-item"><button onclick="showPanel(2)"><span class="m-num">03</span><span class="m-icon">⚙️</span><span class="m-name">Tech Edge</span></button></li>
+      <li class="module-item"><button onclick="showPanel(3)"><span class="m-num">04</span><span class="m-icon">📊</span><span class="m-name">Vs. Competitors</span></button></li>
+      <li class="module-item"><button onclick="showPanel(4)"><span class="m-num">05</span><span class="m-icon">🛡️</span><span class="m-name">Objections</span></button></li>
+      <li class="module-item"><button onclick="showPanel(5)"><span class="m-num">06</span><span class="m-icon">💬</span><span class="m-name">Sales Scripts</span></button></li>
+      <li class="module-item"><button onclick="showPanel(6)"><span class="m-num">07</span><span class="m-icon">✅</span><span class="m-name">Quiz</span></button></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENT -->
+  <div>
+
+    <!-- MODULE 1: WHAT IS A CP3 PUMP -->
+    <div class="panel active" id="panel-0">
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-icon-wrap">🔩</div>
+          <div>
+            <h2>What is a CP3 Pump?</h2>
+            <p>The foundation of every common-rail diesel fuel system</p>
+          </div>
+        </div>
+
+        <p style="font-size:14px;color:var(--mid);line-height:1.7;margin-bottom:1.25rem;">Before you can sell a CP3 pump confidently, you need to understand exactly what it does — and why it matters so much to diesel engine performance. This module gives you the foundation.</p>
+
+        <div style="background:var(--light);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1.25rem;">
+          <p style="font-size:15px;font-weight:600;color:var(--dark2);margin-bottom:0.5rem;">The one-sentence answer:</p>
+          <p style="font-size:15px;color:var(--mid);line-height:1.7;">The CP3 pump takes low-pressure fuel from the tank and compresses it to extreme pressures — up to 26,000+ PSI — so diesel injectors can fire with the precision and force needed for efficient combustion.</p>
+        </div>
+
+        <!-- Animated fuel system diagram -->
+        <div style="margin-bottom:1.25rem;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#fff;">
+          <div style="padding:0.75rem 1rem;border-bottom:1px solid var(--border);font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;">Diesel fuel system — how it all connects</div>
+          <div style="padding:0.5rem 0;">
+            <svg width="100%" viewBox="0 0 680 340" role="img" aria-label="Animated diagram of diesel fuel flow from tank through CP3 pump to common rail and injectors">
+              <defs>
+                <marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </marker>
+                <style>
+                  @keyframes fd { to { stroke-dashoffset: -24; } }
+                  @keyframes fds { to { stroke-dashoffset: -24; } }
+                  @keyframes pistonMove { 0%,100%{transform:translateY(0)} 50%{transform:translateY(9px)} }
+                  @keyframes injectPulse { 0%,75%,100%{opacity:0;transform:scaleY(0)} 10%,55%{opacity:0.85;transform:scaleY(1)} }
+                  .fl { stroke-dasharray:6 6; animation: fd 1.3s linear infinite; }
+                  .fls { stroke-dasharray:5 5; animation: fds 2.4s linear infinite; }
+                  .pist { animation: pistonMove 0.85s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 0%; }
+                  .inj1 { animation: injectPulse 0.85s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 0%; }
+                  .inj2 { animation: injectPulse 0.85s ease-in-out infinite .28s; transform-box:fill-box; transform-origin:50% 0%; }
+                  .inj3 { animation: injectPulse 0.85s ease-in-out infinite .56s; transform-box:fill-box; transform-origin:50% 0%; }
+                  @media (prefers-reduced-motion:reduce) { .fl,.fls,.pist,.inj1,.inj2,.inj3 { animation:none; } }
+                </style>
+              </defs>
+
+              <!-- FUEL TANK -->
+              <rect x="20" y="118" width="96" height="60" rx="8" fill="#E6F1FB" stroke="#378ADD" stroke-width="0.5"/>
+              <text font-family="'Barlow',sans-serif" font-weight="600" font-size="13" fill="#0C447C" x="68" y="145" text-anchor="middle">Fuel tank</text>
+              <text font-family="'Barlow',sans-serif" font-size="11" fill="#185FA5" x="68" y="163" text-anchor="middle">Low pressure</text>
+
+              <!-- Lift pump -->
+              <rect x="148" y="130" width="72" height="38" rx="6" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+              <text font-family="'Barlow',sans-serif" font-weight="600" font-size="12" fill="#444441" x="184" y="147" text-anchor="middle">Lift pump</text>
+              <text font-family="'Barlow',sans-serif" font-size="11" fill="#888780" x="184" y="161" text-anchor="middle">~15 PSI</text>
+
+              <!-- Flow: tank → lift pump -->
+              <line class="fl" x1="116" y1="148" x2="145" y2="148" stroke="#378ADD" stroke-width="2" fill="none" marker-end="url(#arr2)"/>
+              <text font-family="'Barlow',sans-serif" font-size="10" fill="#888780" x="130" y="140" text-anchor="middle">~5 PSI</text>
+
+              <!-- CP3 PUMP -->
+              <rect x="258" y="98" width="136" height="100" rx="10" fill="#FAECE7" stroke="#D85A30" stroke-width="1.5"/>
+              <text font-family="'Barlow',sans-serif" font-weight="700" font-size="14" fill="#4A1B0C" x="326" y="128" text-anchor="middle">CP3 Pump</text>
+              <text font-family="'Barlow',sans-serif" font-size="11" fill="#993C1D" x="326" y="146" text-anchor="middle">Pressurizes to</text>
+              <text font-family="'Barlow',sans-serif" font-size="11" fill="#993C1D" x="326" y="161" text-anchor="middle">26,000+ PSI</text>
+              <!-- animated piston -->
+              <rect class="pist" x="300" y="170" width="52" height="14" rx="3" fill="#D85A30" opacity="0.45"/>
+
+              <!-- Flow: lift pump → CP3 -->
+              <line class="fl" x1="220" y1="149" x2="255" y2="149" stroke="#888780" stroke-width="1.5" fill="none" marker-end="url(#arr2)"/>
+              <text font-family="'Barlow',sans-serif" font-size="10" fill="#888780" x="237" y="141" text-anchor="middle">~15 PSI</text>
+
+              <!-- COMMON RAIL -->
+              <rect x="440" y="114" width="124" height="68" rx="8" fill="#FAEEDA" stroke="#BA7517" stroke-width="0.5"/>
+              <text font-family="'Barlow',sans-serif" font-weight="600" font-size="13" fill="#412402" x="502" y="140" text-anchor="middle">Common rail</text>
+              <text font-family="'Barlow',sans-serif" font-size="11" fill="#854F0B" x="502" y="158" text-anchor="middle">Pressure reservoir</text>
+              <text font-family="'Barlow',sans-serif" font-size="11" fill="#854F0B" x="502" y="173" text-anchor="middle">26,000+ PSI</text>
+
+              <!-- Flow: CP3 → rail (high pressure, thick orange) -->
+              <line class="fl" x1="394" y1="148" x2="437" y2="148" stroke="#D85A30" stroke-width="3" fill="none" marker-end="url(#arr2)"/>
+              <text font-family="'Barlow',sans-serif" font-weight="600" font-size="10" fill="#993C1D" x="415" y="138" text-anchor="middle">HIGH PSI</text>
+
+              <!-- INJECTORS -->
+              <rect x="448" y="240" width="38" height="68" rx="5" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+              <rect x="494" y="240" width="38" height="68" rx="5" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+              <rect x="540" y="240" width="38" height="68" rx="5" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+              <text font-family="'Barlow',sans-serif" font-weight="600" font-size="11" fill="#085041" x="467" y="272" text-anchor="middle">Inj.</text>
+              <text font-family="'Barlow',sans-serif" font-weight="600" font-size="11" fill="#085041" x="513" y="272" text-anchor="middle">Inj.</text>
+              <text font-family="'Barlow',sans-serif" font-weight="600" font-size="11" fill="#085041" x="559" y="272" text-anchor="middle">Inj.</text>
+              <text font-family="'Barlow',sans-serif" font-size="10" fill="#1D9E75" x="467" y="288" text-anchor="middle">#1</text>
+              <text font-family="'Barlow',sans-serif" font-size="10" fill="#1D9E75" x="513" y="288" text-anchor="middle">#2</text>
+              <text font-family="'Barlow',sans-serif" font-size="10" fill="#1D9E75" x="559" y="288" text-anchor="middle">#3</text>
+
+              <!-- Rail → injectors -->
+              <line x1="467" y1="182" x2="467" y2="237" stroke="#BA7517" stroke-width="1.5" fill="none" marker-end="url(#arr2)"/>
+              <line x1="502" y1="182" x2="513" y2="237" stroke="#BA7517" stroke-width="1.5" fill="none" marker-end="url(#arr2)"/>
+              <line x1="537" y1="182" x2="559" y2="237" stroke="#BA7517" stroke-width="1.5" fill="none" marker-end="url(#arr2)"/>
+
+              <!-- Injection spray -->
+              <ellipse class="inj1" cx="467" cy="318" rx="7" ry="10" fill="#1D9E75" opacity="0.7"/>
+              <ellipse class="inj2" cx="513" cy="318" rx="7" ry="10" fill="#1D9E75" opacity="0.7"/>
+              <ellipse class="inj3" cx="559" cy="318" rx="7" ry="10" fill="#1D9E75" opacity="0.7"/>
+
+              <!-- Return line -->
+              <path class="fls" d="M448 275 Q400 310 200 310 Q100 310 68 180" fill="none" stroke="#B4B2A9" stroke-width="1.5" marker-end="url(#arr2)"/>
+              <text font-family="'Barlow',sans-serif" font-size="10" fill="#888780" x="258" y="322" text-anchor="middle">Excess fuel return to tank</text>
+
+              <!-- Legend -->
+              <line x1="20" y1="330" x2="44" y2="330" stroke="#378ADD" stroke-width="2" stroke-dasharray="5 5"/>
+              <text font-family="'Barlow',sans-serif" font-size="10" fill="#888780" x="50" y="334">Low pressure</text>
+              <line x1="148" y1="330" x2="172" y2="330" stroke="#D85A30" stroke-width="3" stroke-dasharray="5 5"/>
+              <text font-family="'Barlow',sans-serif" font-size="10" fill="#888780" x="178" y="334">High pressure</text>
+              <line x1="280" y1="330" x2="304" y2="330" stroke="#B4B2A9" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <text font-family="'Barlow',sans-serif" font-size="10" fill="#888780" x="310" y="334">Return line</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- How it works step breakdown -->
+        <p style="font-size:13px;font-weight:700;color:var(--dark2);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.75rem;">How it works — step by step</p>
+        <ul class="bullet-list">
+          <li><span class="arrow" style="color:#378ADD;">①</span><span><strong>Fuel is drawn from the tank</strong> by a low-pressure lift pump (~5–15 PSI). This moves raw diesel from the tank to the CP3 pump inlet.</span></li>
+          <li><span class="arrow" style="color:#D85A30;">②</span><span><strong>The CP3 pump compresses the fuel</strong> using three internal cam-driven pistons (that's what "CP3" stands for — Common rail Pump, 3 cylinders). It takes that ~15 PSI supply and cranks it up to 23,000–26,000+ PSI.</span></li>
+          <li><span class="arrow" style="color:#BA7517;">③</span><span><strong>High-pressure fuel fills the common rail</strong> — a metal tube shared by all injectors. The ECM (engine computer) monitors and regulates rail pressure in real time.</span></li>
+          <li><span class="arrow" style="color:#0F6E56;">④</span><span><strong>Injectors fire with extreme precision</strong> — atomizing fuel directly into the combustion chamber at exactly the right moment and in the right quantity. High rail pressure = finer atomization = cleaner, more complete combustion.</span></li>
+          <li><span class="arrow" style="color:#888780;">⑤</span><span><strong>Excess fuel returns to the tank.</strong> The system is always circulating — unused fuel acts as a coolant for pump internals and recirculates back to the tank.</span></li>
+        </ul>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:1.25rem 0;">
+          <div class="kpi-card"><div class="kpi-num" style="font-size:20px;">CP3</div><div class="kpi-label">Common rail Pump, 3-piston design</div></div>
+          <div class="kpi-card"><div class="kpi-num" style="font-size:20px;">26k+</div><div class="kpi-label">PSI maximum rail pressure</div></div>
+          <div class="kpi-card"><div class="kpi-num" style="font-size:20px;">ECM</div><div class="kpi-label">Controls rail pressure in real time</div></div>
+          <div class="kpi-card"><div class="kpi-num" style="font-size:20px;">3×</div><div class="kpi-label">Pistons firing sequentially inside the pump</div></div>
+        </div>
+
+        <p style="font-size:13px;font-weight:700;color:var(--dark2);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.75rem;margin-top:0.5rem;">Why rail pressure matters so much</p>
+        <ul class="bullet-list">
+          <li><span class="arrow">▶</span><span><strong>Atomization = power and efficiency.</strong> Higher pressure forces fuel through smaller injector nozzle holes at greater velocity, breaking it into a finer mist. Finer mist = more complete combustion = more power from every drop of fuel.</span></li>
+          <li><span class="arrow">▶</span><span><strong>Pressure drop = lost power.</strong> If the CP3 can't maintain rail pressure under load — towing, racing, hard acceleration — injectors starve. The ECM pulls timing and fueling back, and performance falls off a cliff.</span></li>
+          <li><span class="arrow">▶</span><span><strong>Injector health depends on it.</strong> Running low rail pressure causes injectors to wear faster, stick, or fail entirely. A weak pump quietly destroys the most expensive parts in the fuel system.</span></li>
+          <li><span class="arrow">▶</span><span><strong>Modified engines need more.</strong> Every horsepower upgrade — bigger injectors, hot tunes, compound turbos — demands more fuel volume and sustained pressure. A stock or low-quality CP3 becomes the bottleneck instantly.</span></li>
+        </ul>
+
+        <div class="tip-box" style="margin-top:1.25rem;"><strong>Sales tip:</strong> Understanding this makes you credible the moment a customer asks a technical question. "CP3 stands for Common rail Pump, 3 pistons — and your entire fuel system's performance depends on what it can sustain under load" is the kind of answer that closes sales.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="showPanel(1)">Next: Brand Story →</button>
+      </div>
+    </div>
+
+    <!-- MODULE 2: BRAND STORY -->
+    <div class="panel" id="panel-1">
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-icon-wrap">🏭</div>
+          <div>
+            <h2>The Industrial Injection Brand</h2>
+            <p>Who we are and why it matters to your customers</p>
+          </div>
+        </div>
+        <div class="kpi-grid">
+          <div class="kpi-card"><div class="kpi-num">35+</div><div class="kpi-label">Years diesel performance experience</div></div>
+          <div class="kpi-card"><div class="kpi-num">USA</div><div class="kpi-label">Designed, built & tested domestically</div></div>
+          <div class="kpi-card"><div class="kpi-num">OEM+</div><div class="kpi-label">Specs exceed factory standards</div></div>
+          <div class="kpi-card"><div class="kpi-num">#1</div><div class="kpi-label">Diesel performance brand trust</div></div>
+        </div>
+        <ul class="bullet-list">
+          <li><span class="arrow">▶</span><span><strong>Diesel specialists, not generalists.</strong> Industrial Injection does one thing — diesel performance — and has done it longer than most competitors have existed. Every CP3 pump reflects decades of application-specific knowledge.</span></li>
+          <li><span class="arrow">▶</span><span><strong>Built for real-world conditions.</strong> Pumps are tested in demanding environments — tow rigs, race trucks, work vehicles. Not just on a bench in perfect conditions.</span></li>
+          <li><span class="arrow">▶</span><span><strong>Proprietary upgrades inside every unit.</strong> Every II CP3 ships with internal improvements — upgraded pistons, stronger springs, tighter clearances — that aren't found in stock or competitor rebuilds.</span></li>
+          <li><span class="arrow">▶</span><span><strong>Trusted by top diesel builders nationwide.</strong> From NHRDA competitors to heavy haulers, II is the name professionals specify by name — not just "a CP3."</span></li>
+          <li><span class="arrow">▶</span><span><strong>Full traceability and accountability.</strong> Every pump is tracked, tested, and documented. If there's ever a warranty claim, II stands behind it — no finger-pointing.</span></li>
+        </ul>
+        <div class="tip-box"><strong>Sales tip:</strong> Lead with legacy. "Industrial Injection has been building diesel pumps since before most of our competitors were founded" is a powerful opener that immediately establishes authority.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-outline" onclick="showPanel(0)">← Back</button>
+        <button class="btn btn-primary" onclick="showPanel(2)">Next: Technical Edge →</button>
+      </div>
+    </div>
+    <!-- MODULE 3: TECH EDGE -->
+    <div class="panel" id="panel-2">
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-icon-wrap">⚙️</div>
+          <div>
+            <h2>Technical Advantages</h2>
+            <p>What's inside an II CP3 that makes it different</p>
+          </div>
+        </div>
+        <p style="font-size:14px;color:var(--muted);margin-bottom:1rem;line-height:1.6;">Understanding the engineering behind the product lets you sell with confidence. These are the key differentiators to know and communicate.</p>
+        <ul class="bullet-list">
+          <li><span class="arrow">▶</span><span><strong>Higher sustained rail pressure.</strong> II CP3s are built and tested to maintain consistent high-pressure output under load. Competitors often see pressure drop under hard use — II doesn't. This directly translates to better injector performance and cleaner combustion.</span></li>
+          <li><span class="arrow">▶</span><span><strong>New components, not remanufactured cores.</strong> Many competitors rebuild worn cores. II uses new or tightly-spec'd components throughout, eliminating the uncertainty of remanufactured wear surfaces.</span></li>
+          <li><span class="arrow">▶</span><span><strong>Fuel volume upgrades available.</strong> II offers stock-replacement and performance-upgraded versions — allowing customers to grow into more fueling capacity as they add injectors or turn up the tune.</span></li>
+          <li><span class="arrow">▶</span><span><strong>Tested across operating temperatures.</strong> Pump seals, o-rings, and internals are validated for extreme cold starts and sustained high-heat operation — conditions where cheaper pumps fail early.</span></li>
+          <li><span class="arrow">▶</span><span><strong>Tight machining tolerances.</strong> Precision machining means better volumetric efficiency — the pump moves more fuel per rotation with less internal leakage, which is critical for high-HP builds.</span></li>
+          <li><span class="arrow">▶</span><span><strong>Longevity by design.</strong> Upgraded internal components mean less wear over time. Customers who buy once, buy right — and they remember who sold it to them.</span></li>
+        </ul>
+        <table class="spec-table" style="margin-top:1.5rem">
+          <thead><tr><th>Specification</th><th>Industrial Injection</th></tr></thead>
+          <tbody>
+            <tr><td>Rail pressure target</td><td class="ii-val">26,000+ PSI sustained</td></tr>
+            <tr><td>Core quality</td><td class="ii-val">New / upgraded components</td></tr>
+            <tr><td>Testing protocol</td><td class="ii-val">Dyno-verified, every unit</td></tr>
+            <tr><td>Performance options</td><td class="ii-val">Stock / +25% / +50% flow</td></tr>
+            <tr><td>Application coverage</td><td class="ii-val">Cummins 5.9L, 6.7L; Duramax LLY/LBZ/LMM</td></tr>
+            <tr><td>Warranty</td><td class="ii-val">Industry-leading, direct support</td></tr>
+          </tbody>
+        </table>
+        <div class="tip-box"><strong>Sales tip:</strong> When a customer says "it's just a pump" — ask them what their injectors cost. A $4,000+ injector set deserves a pump that won't starve them of fuel. The CP3 is the foundation of the whole fuel system.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-outline" onclick="showPanel(1)">← Back</button>
+        <button class="btn btn-primary" onclick="showPanel(3)">Next: Vs. Competitors →</button>
+      </div>
+    </div>
+
+    <!-- MODULE 4: VS COMPETITORS -->
+    <div class="panel" id="panel-3">
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-icon-wrap">📊</div>
+          <div>
+            <h2>Industrial Injection vs. The Competition</h2>
+            <p>Know your battlefield — and how to win on every front</p>
+          </div>
+        </div>
+        <table class="spec-table">
+          <thead>
+            <tr><th style="width:28%">Factor</th><th style="width:36%">Industrial Injection</th><th style="width:36%">Typical Competitor</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Component quality</strong></td><td><span class="badge-win">✓ New / upgraded</span></td><td class="comp-val">Remanufactured cores, variable quality</td></tr>
+            <tr><td><strong>Rail pressure output</strong></td><td><span class="badge-win">✓ Consistent 26k+ PSI</span></td><td class="comp-val">Often drops under sustained load</td></tr>
+            <tr><td><strong>Testing before ship</strong></td><td><span class="badge-win">✓ Every unit dyno-tested</span></td><td class="comp-val">Bench tested or spot-checked only</td></tr>
+            <tr><td><strong>Diesel expertise</strong></td><td><span class="badge-win">✓ 35+ years diesel-only</span></td><td class="comp-val">Often multi-line generalist brands</td></tr>
+            <tr><td><strong>Performance options</strong></td><td><span class="badge-win">✓ Stock, +25%, +50% flow</span></td><td class="comp-val">Usually OEM replacement only</td></tr>
+            <tr><td><strong>Warranty support</strong></td><td><span class="badge-win">✓ Direct, accountable</span></td><td class="comp-val">Often routed through distributors</td></tr>
+            <tr><td><strong>Price</strong></td><td><span class="badge-neutral">Premium positioned</span></td><td class="comp-val">Often lower upfront cost</td></tr>
+            <tr><td><strong>Long-term value</strong></td><td><span class="badge-win">✓ Buy once, done right</span></td><td class="comp-val">Repeat failures increase true cost</td></tr>
+          </tbody>
+        </table>
+        <div class="tip-box"><strong>On price:</strong> Never apologize for cost. Say: "The difference in price is usually recovered the first time you don't have to pull an engine because the cheap pump killed your injectors." Value over price — always.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-outline" onclick="showPanel(2)">← Back</button>
+        <button class="btn btn-primary" onclick="showPanel(4)">Next: Objection Handling →</button>
+      </div>
+    </div>
+
+    <!-- MODULE 5: OBJECTIONS -->
+    <div class="panel" id="panel-4">
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-icon-wrap">🛡️</div>
+          <div>
+            <h2>Objection Handling</h2>
+            <p>Click each objection to reveal the winning response</p>
+          </div>
+        </div>
+
+        <div class="objection">
+          <div class="obj-question" onclick="toggleObj(this)">
+            <span>"I can get a CP3 for half the price online."</span>
+            <span class="obj-chevron">▾</span>
+          </div>
+          <div class="obj-answer">
+            "Absolutely — there are cheaper pumps out there. The question is what's inside them and what happens when it fails. Those pumps are often rebuilt on worn cores with no individual testing. When a cheap pump fails, it usually takes your injectors with it. A set of injectors runs $3,000–$6,000+. The Industrial Injection pump is insurance for your whole fuel system. What's the truck worth to you running right?"
+          </div>
+        </div>
+
+        <div class="objection">
+          <div class="obj-question" onclick="toggleObj(this)">
+            <span>"My customer already runs [Brand X] and has had no problems."</span>
+            <span class="obj-chevron">▾</span>
+          </div>
+          <div class="obj-answer">
+            "That's great — until it fails. The problem with cheaper pumps is they don't send a warning before they fail. When they do go, it's always at the worst time — under load, towing, or at the track. Industrial Injection pumps are tested individually before they ship. That peace of mind has real value, especially for a customer who can't afford downtime."
+          </div>
+        </div>
+
+        <div class="objection">
+          <div class="obj-question" onclick="toggleObj(this)">
+            <span>"It's a stock truck — they don't need a performance pump."</span>
+            <span class="obj-chevron">▾</span>
+          </div>
+          <div class="obj-answer">
+            "Even on a stock truck, the quality difference matters. Industrial Injection's stock-replacement CP3 uses better components than a generic reman. It's going to last longer and perform more reliably. And if the customer ever adds a tune or bigger injectors down the road, they won't have to replace the pump again — II has them covered for where they're going, not just where they are now."
+          </div>
+        </div>
+
+        <div class="objection">
+          <div class="obj-question" onclick="toggleObj(this)">
+            <span>"I've never heard of Industrial Injection."</span>
+            <span class="obj-chevron">▾</span>
+          </div>
+          <div class="obj-answer">
+            "That's actually pretty common if you're not deep in the diesel world — and it's a good sign. Industrial Injection doesn't spend their budget on marketing; they spend it on engineering. They've been the go-to for serious diesel builders for over 35 years. If you ask any top diesel shop or NHRDA competitor what pump they run, II comes up constantly. Their reputation is built entirely on product quality, not ad spend."
+          </div>
+        </div>
+
+        <div class="objection">
+          <div class="obj-question" onclick="toggleObj(this)">
+            <span>"What if there's a warranty issue? Will you take care of it?"</span>
+            <span class="obj-chevron">▾</span>
+          </div>
+          <div class="obj-answer">
+            "Industrial Injection backs their pumps directly. There's no runaround through distributors or manufacturer disclaimers about installation. If a pump fails under warranty, II wants to know about it and make it right — because every failure is data for them. That's the difference between a company that builds pumps as a side product and one where this is their entire reputation."
+          </div>
+        </div>
+
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-outline" onclick="showPanel(3)">← Back</button>
+        <button class="btn btn-primary" onclick="showPanel(5)">Next: Sales Scripts →</button>
+      </div>
+    </div>
+
+    <!-- MODULE 6: SALES SCRIPTS -->
+    <div class="panel" id="panel-5">
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-icon-wrap">💬</div>
+          <div>
+            <h2>Real-World Sales Scripts</h2>
+            <p>Practice scenarios for common selling situations</p>
+          </div>
+        </div>
+        <p style="font-size:13.5px;color:var(--muted);margin-bottom:0.5rem;">These scripts represent real conversations. Study the flow — then make it your own.</p>
+
+        <div class="scenario-label"><span class="scenario-num">1</span> The Price Shopper</div>
+        <div class="scenario-bubble">
+          <div class="scenario-role">Customer</div>
+          <div class="scenario-text">"I found a CP3 on eBay for $180. Why is yours $480?"</div>
+        </div>
+        <div class="scenario-bubble response">
+          <div class="scenario-role">You — Industrial Injection</div>
+          <div class="scenario-text">"Good question — I'd want to know the same thing. The difference is in what you're getting: that eBay pump is almost certainly a remanufactured core with unknown wear, no individual testing, and no accountability if it fails. The Industrial Injection pump ships with upgraded internals and is tested on a flow bench before it leaves the building. More importantly — when a cheap pump fails, it usually wipes out your injectors too. You're not comparing $180 vs $480 — you're comparing $480 vs a potential $4,000+ injector replacement plus labor. Which risk are you comfortable with?"</div>
+        </div>
+
+        <div class="scenario-label"><span class="scenario-num">2</span> The Performance Build Customer</div>
+        <div class="scenario-bubble">
+          <div class="scenario-role">Customer</div>
+          <div class="scenario-text">"I'm running 100hp injectors and a hot tune. Will a stock CP3 keep up?"</div>
+        </div>
+        <div class="scenario-bubble response">
+          <div class="scenario-role">You — Industrial Injection</div>
+          <div class="scenario-text">"No, and that's a really important question. With 100hp injectors, your fuel demand is already past what a stock pump was designed for. You'll see rail pressure drop under boost, which kills combustion efficiency and can crack pistons. I'd recommend the Industrial Injection +25% or +50% flow CP3 depending on where you're headed with the build. These are built specifically for that application — not a guess, not a generic reman. Tell me your target power level and I'll point you to the right one."</div>
+        </div>
+
+        <div class="scenario-label"><span class="scenario-num">3</span> The Brand-Loyal Customer</div>
+        <div class="scenario-bubble">
+          <div class="scenario-role">Customer</div>
+          <div class="scenario-text">"I've always bought [Competitor Brand]. Why should I switch?"</div>
+        </div>
+        <div class="scenario-bubble response">
+          <div class="scenario-role">You — Industrial Injection</div>
+          <div class="scenario-text">"Loyalty based on results is smart — I respect that. Here's what I'd ask: have you ever compared what's actually inside each pump? Industrial Injection is a diesel-specialist company — CP3 pumps aren't a side product for them, they're the core of their business. They test every single unit individually and use upgraded internal components. If your current brand has worked, great — but the next time you're buying one, let me put an II pump side by side and walk you through the differences. You'll either confirm your current brand is the right call, or you'll have found something better. Either way, you win."</div>
+        </div>
+
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-outline" onclick="showPanel(4)">← Back</button>
+        <button class="btn btn-primary" onclick="showPanel(6)">Take the Quiz →</button>
+      </div>
+    </div>
+
+    <!-- MODULE 7: QUIZ -->
+    <div class="panel" id="panel-6">
+      <div class="panel-card">
+        <div class="panel-header">
+          <div class="panel-icon-wrap">✅</div>
+          <div>
+            <h2>Knowledge Check</h2>
+            <p>Test your readiness to sell Industrial Injection CP3 pumps</p>
+          </div>
+        </div>
+        <div id="quiz-container"></div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-outline" onclick="showPanel(5)">← Back to Scripts</button>
+      </div>
+    </div>
+
+  </div><!-- end content -->
+</main>
+
+<footer class="site-footer">
+  <p><strong>Industrial Injection</strong> CP3 Pump Sales Training &nbsp;|&nbsp; For internal sales use only</p>
+</footer>
+
+<script>
+const panels = document.querySelectorAll('.panel');
+const navBtns = document.querySelectorAll('.module-item button');
+const progFill = document.getElementById('prog-fill');
+const progLabel = document.getElementById('prog-label');
+const progPct = document.getElementById('prog-pct');
+
+function showPanel(idx) {
+  panels.forEach((p, i) => p.classList.toggle('active', i === idx));
+  navBtns.forEach((b, i) => b.classList.toggle('active', i === idx));
+  const pct = Math.round(((idx + 1) / 7) * 100);
+  progFill.style.width = pct + '%';
+  progLabel.textContent = 'Module ' + (idx + 1) + ' of 7';
+  progPct.textContent = pct + '%';
+  if (idx === 6) initQuiz();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toggleObj(el) {
+  const ans = el.nextElementSibling;
+  const chev = el.querySelector('.obj-chevron');
+  const isOpen = ans.classList.toggle('open');
+  chev.classList.toggle('open', isOpen);
+}
+
+const questions = [
+  {
+    q: "A customer says they can get a CP3 for half the price online. What is the most effective response?",
+    opts: [
+      "Apologize for the higher price and offer a discount.",
+      "Explain that cheap pumps risk damaging injectors worth $3,000–$6,000+, making II the lower-risk investment.",
+      "Tell them the cheap pump will definitely fail.",
+      "Ask them to compare spec sheets side by side."
+    ],
+    correct: 1,
+    feedback: "Correct! Reframe the conversation from pump cost to total system risk. A cheap pump that kills injectors costs far more than the savings."
+  },
+  {
+    q: "What is a key technical advantage of Industrial Injection CP3 pumps over most competitors?",
+    opts: [
+      "They are less expensive than OEM replacement pumps.",
+      "They are sourced from overseas manufacturers with lower overhead.",
+      "Every unit is individually dyno-tested and uses new or upgraded internal components.",
+      "They carry a lifetime warranty against all failures."
+    ],
+    correct: 2,
+    feedback: "Correct! Individual testing and upgraded internals are core differentiators. Competitors often rebuild worn cores and do only spot-checking."
+  },
+  {
+    q: "A customer running 100hp injectors and a hot tune asks if a stock CP3 will keep up. Your best answer is:",
+    opts: [
+      "Yes, a stock pump will be fine for most builds.",
+      "No — recommend the II performance CP3 (+25% or +50% flow) matched to their build level.",
+      "Recommend they lower the tune before worrying about the pump.",
+      "Tell them to check with their tuner first."
+    ],
+    correct: 1,
+    feedback: "Correct! A stock CP3 cannot supply sufficient fuel volume for 100hp injectors under load. Recommend the right II performance pump — and close a bigger sale."
+  },
+  {
+    q: "How long has Industrial Injection been a diesel performance specialist?",
+    opts: ["About 10 years", "Over 20 years", "Over 35 years", "Since 2005"],
+    correct: 2,
+    feedback: "Correct! 35+ years of diesel-only experience is a major credibility differentiator. Lead with this when establishing authority."
+  },
+  {
+    q: "When a customer says they've never had a problem with a competitor brand, what is the best response?",
+    opts: [
+      "Agree that their choice was fine and move on.",
+      "Tell them the competitor brand is inferior.",
+      "Acknowledge their experience, then point out that pump failures rarely give advance warning — and the consequences are severe.",
+      "Offer them a discount to switch brands immediately."
+    ],
+    correct: 2,
+    feedback: "Correct! Validate their experience without dismissing it. Then shift to risk: cheap pumps fail without warning. II is peace of mind."
+  }
+];
+
+let qState = { idx: 0, score: 0, answered: false };
+
+function initQuiz() {
+  qState = { idx: 0, score: 0, answered: false };
+  renderQ();
+}
+
+function renderQ() {
+  const c = document.getElementById('quiz-container');
+  if (qState.idx >= questions.length) {
+    const pct = Math.round((qState.score / questions.length) * 100);
+    const msg = pct >= 80 ? 'Excellent — you\'re ready to sell!' : pct >= 60 ? 'Good effort. Review the modules and try again.' : 'Review the training and retake the quiz.';
+    c.innerHTML = `<div class="results-card">
+      <div class="results-score">${pct}%</div>
+      <div class="results-msg">${qState.score} of ${questions.length} correct</div>
+      <div class="results-sub">${msg}</div>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-outline" onclick="initQuiz()">Retake Quiz</button>
+        <button class="btn btn-dark" onclick="showPanel(0)">Review All Modules</button>
+      </div>
+    </div>`;
+    return;
+  }
+  const q = questions[qState.idx];
+  c.innerHTML = `
+    <div class="quiz-counter">Question ${qState.idx + 1} of ${questions.length}</div>
+    <hr class="quiz-divider">
+    <div class="quiz-q">${qState.idx + 1}. ${q.q}</div>
+    <div class="quiz-options">
+      ${q.opts.map((o, i) => `<button class="quiz-opt" onclick="selectOpt(this, ${i})">${o}</button>`).join('')}
+    </div>
+    <div class="quiz-feedback" id="qfb"></div>
+    <div class="quiz-nav">
+      <span class="quiz-counter" style="opacity:0">placeholder</span>
+      <button class="btn btn-primary" id="next-btn" style="display:none" onclick="nextQ()">Next Question →</button>
+    </div>`;
+  qState.answered = false;
+}
+
+function selectOpt(el, idx) {
+  if (qState.answered) return;
+  qState.answered = true;
+  const q = questions[qState.idx];
+  document.querySelectorAll('.quiz-opt').forEach(b => b.disabled = true);
+  document.querySelectorAll('.quiz-opt')[q.correct].classList.add('correct');
+  const fb = document.getElementById('qfb');
+  if (idx === q.correct) {
+    qState.score++;
+    fb.className = 'quiz-feedback correct';
+    fb.textContent = '✓ ' + q.feedback;
+  } else {
+    el.classList.add('wrong');
+    fb.className = 'quiz-feedback wrong';
+    fb.textContent = '✗ Not quite. ' + q.feedback;
+  }
+  const nb = document.getElementById('next-btn');
+  nb.style.display = 'inline-flex';
+  nb.textContent = qState.idx < questions.length - 1 ? 'Next Question →' : 'See Results →';
+}
+
+function nextQ() {
+  qState.idx++;
+  renderQ();
+}
+
+initQuiz();
+</script>
+</body>
+</html>
